@@ -32,25 +32,35 @@
         }
         .image-container {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            gap: 10px; /* Adds space between images */
+            gap: 10px; /* Adds space between the images */
             margin-top: 20px; /* Adds space above the image container */
         }
-        .image-container img {
-            width: 200px; /* Adjust the size as needed */
-            height: auto;
+        .image-row {
+            display: flex;
+            gap: 10px; /* Adds space between images in a row */
+        }
+        .image-container img:first-of-type {
+            width: 400px; /* First image width */
+            height: auto; /* Maintain aspect ratio */
+        }
+        .image-row img {
+            width: 200px; /* Other images width */
+            height: auto; /* Maintain aspect ratio */
         }
     </style>
 </head>
 <body>
     <h1 class="big-white-text">Kenji Stamet</h1>
     <h1>Father, Husband & Teacher</h1>
-    <img src="1.jpg" alt="Image 1">
     <div class="image-container">
-        <img src="2.jpg" alt="Image 2">
-        <img src="3.jpg" alt="Image 3">
-        <img src="4.jpg" alt="Image 4">
+        <img src="1.jpg" alt="Image 1">
+        <div class="image-row">
+            <img src="2.jpg" alt="Image 2">
+            <img src="3.jpg" alt="Image 3">
+            <img src="4.jpg" alt="Image 4">
+        </div>
     </div>
 </body>
 </html>
